@@ -1,0 +1,16 @@
+// function to add up to nth number
+const {performance} = require('perf_hooks');
+
+function addUpTo(n){
+let total = 0
+for(var i=0; i<=n; i++){
+    total += i;
+}
+return total
+}
+
+var time1 = performance.now();
+addUpTo(1000000000);
+var time2 = performance.now();
+
+console.log(`Time elapsed: ${(time2-time1)/1000} seconds`);
