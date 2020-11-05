@@ -27,6 +27,7 @@ function sumZeroFast(arr){
     while(left < right){
         let sum = arr[left] + arr[right];
         if(sum === 0){
+            console.log([arr[left], arr[right]])
             return [arr[left], arr[right]];
         } else if(sum > 0){
             right--;
@@ -35,5 +36,5 @@ function sumZeroFast(arr){
         }
     }
 }
-sumZeroFast([-3, -2, -1, 0, 1, 2, 3]);
+sumZeroFast([-3, -2, -1, 0, 1, 2, 3, 4]);
 
