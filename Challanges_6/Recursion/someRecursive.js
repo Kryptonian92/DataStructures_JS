@@ -3,11 +3,15 @@
 // returns true when passed to the callback.
 // otherwise it returns false
 
+function callback(){
+    return;
+}
+
 function someRecursive(arr, callback){
     if (arr.length === 0) return false;
     if (callback(arr[0])) return true;
     return someRecursive(arr.slice(1), callback);
 }
-someRecursive([1,2,3,4], isOdd)
+someRecursive([1,2,3,4], callback())
 
 // Needs work!
